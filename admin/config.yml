@@ -1,0 +1,65 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/photos"
+public_folder: "/assets/photos"
+
+editor:
+  preview: false
+
+collections:
+  - name: "site"
+    label: "Website Content"
+    files:
+      - name: "home"
+        label: "Mann Ki Diary"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - { label: "Site Name", name: "siteName", widget: "string" }
+          - { label: "Hero Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+          - { label: "Featured Quote", name: "featuredQuote", widget: "text" }
+          - { label: "Featured Quote By", name: "featuredBy", widget: "string" }
+          - { label: "About Title", name: "aboutTitle", widget: "string" }
+          - { label: "About Text", name: "aboutText", widget: "text" }
+          - { label: "Footer Text", name: "footerText", widget: "string" }
+          - label: "Memories"
+            name: "memories"
+            widget: "list"
+            summary: "{{fields.title}} - {{fields.mood}}"
+            fields:
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Mood", name: "mood", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Story", name: "text", widget: "text" }
+              - { label: "Post Image", name: "image", widget: "image", required: false }
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                required: false
+                field: { label: "Tag", name: "tag", widget: "string" }
+          - label: "Photo Gallery"
+            name: "gallery"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Caption", name: "caption", widget: "text" }
+              - { label: "Photo", name: "image", widget: "image", required: false }
+          - label: "Small Thoughts"
+            name: "thoughts"
+            widget: "list"
+            summary: "{{fields.text}}"
+            fields:
+              - { label: "Thought", name: "text", widget: "text" }
+              - { label: "Byline", name: "by", widget: "string", required: false }
+          - label: "Letters & Lines"
+            name: "letters"
+            widget: "list"
+            summary: "{{fields.by}}"
+            fields:
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Byline", name: "by", widget: "string", required: false }
