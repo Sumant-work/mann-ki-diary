@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mann Ki Diary</title>
+  <meta name="description" content="A soft personal blog-style memories page for stories, feelings, photos and life moments." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css?v=6" />
+</head>
+<body>
+  <div class="soft-bg" aria-hidden="true"></div>
+  <div class="petal-layer" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="site-header" id="top">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-mark">✦</span>
+        <span id="brandName">Mann Ki Diary</span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#memories">Memories</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#thoughts">Thoughts</a>
+        <a href="#letters">Letters</a>
+        <a href="#about">About</a>
+        <a href="admin/">Admin</a>
+      </div>
+    </nav>
+
+    <section class="hero section-wrap">
+      <div class="hero-copy reveal">
+        <p class="eyebrow" id="eyebrowText">A quiet corner for real feelings</p>
+        <h1 id="heroTitle">Where moments become memories.</h1>
+        <p class="hero-text" id="heroSubtitle">
+          Stories, photos, thoughts, and little pieces of life—kept softly in one beautiful place.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#memories">Read memories</a>
+          <a class="ghost-btn" href="admin/">Write a post</a>
+        </div>
+      </div>
+
+      <aside class="hero-card reveal" aria-label="Featured thought">
+        <img class="hero-sticker" src="assets/stickers/profile-sticker.png" alt="" aria-hidden="true" />
+        <div class="moon"></div>
+        <p class="quote-mark">“</p>
+        <p id="featuredQuote">Some feelings are not posted for attention. They are kept because they once made us alive.</p>
+        <span id="featuredBy">— My heart</span>
+      </aside>
+    </section>
+  </header>
+
+  <main>
+    <section class="section-wrap intro-grid" aria-label="Website highlights">
+      <article class="mini-card reveal">
+        <span>🌸</span>
+        <h3>Mann Ki Baatein</h3>
+        <p>Dil se likhi hui stories, moods, dates aur yaadein.</p>
+      </article>
+      <article class="mini-card reveal">
+        <span>📷</span>
+        <h3>Yaadon Ke Frames</h3>
+        <p>Photos ke saath captions, friends aur un palon ki chhoti kahani.</p>
+      </article>
+      <article class="mini-card reveal">
+        <span>🕯️</span>
+        <h3>Unsent Letters</h3>
+        <p>Wo baatein jo keh nahi paaya, poems aur quiet feelings.</p>
+      </article>
+    </section>
+
+    <section class="section-wrap" id="memories">
+      <div class="section-head reveal">
+        <p class="eyebrow">Timeline</p>
+        <h2>Memory Journal</h2>
+        <p>Search by word, feeling, place or date.</p>
+      </div>
+
+      <div class="tools reveal">
+        <label class="search-box">
+          <span>Search</span>
+          <input id="searchInput" type="search" placeholder="Try: hope, rain, birthday, night..." />
+        </label>
+        <label class="filter-box">
+          <span>Mood</span>
+          <select id="moodFilter">
+            <option value="all">All moods</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="memory-list" id="memoryList" aria-live="polite"></div>
+    </section>
+
+    <section class="section-wrap" id="gallery">
+      <div class="section-head reveal">
+        <p class="eyebrow">Frames</p>
+        <h2>Photo Gallery</h2>
+        <p>Small photos, big feelings.</p>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </section>
+
+    <section class="section-wrap split-section" id="thoughts">
+      <div class="section-head reveal">
+        <p class="eyebrow">Small thoughts</p>
+        <h2>Little Lines</h2>
+        <p>Short feelings, quick notes and lines worth saving.</p>
+      </div>
+      <div class="thought-carousel reveal" aria-label="Little Lines">
+        <button class="thought-nav" id="thoughtPrev" type="button" aria-label="Previous thoughts" title="Previous thoughts">‹</button>
+        <div class="thought-grid" id="thoughtGrid"></div>
+        <button class="thought-nav" id="thoughtNext" type="button" aria-label="Next thoughts" title="Next thoughts">›</button>
+      </div>
+      <p class="thought-status" id="thoughtStatus"></p>
+    </section>
+
+    <section class="section-wrap split-section" id="letters">
+      <div class="section-head reveal">
+        <p class="eyebrow">Unsent words</p>
+        <h2>Letters & Lines</h2>
+        <p>For the words that needed a home.</p>
+      </div>
+      <div class="letter-board reveal" id="letterBoard"></div>
+    </section>
+
+    <section class="section-wrap about-section" id="about">
+      <div class="about-card reveal">
+        <p class="eyebrow">About this page</p>
+        <h2 id="aboutTitle">A peaceful personal archive.</h2>
+        <p id="aboutText">
+          A place where thoughts slow down, memories breathe, and feelings find their own little sky. Here, I write the moments I could not say out loud — stories, emotions, dreams, growth, silence, and everything that made me who I am becoming.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p id="footerText">Made with memories, softness and hope.</p>
+    <div class="footer-links">
+      <a href="admin/">Admin</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+  <script src="script.js?v=6"></script>
+</body>
+</html>
