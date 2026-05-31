@@ -60,7 +60,7 @@
     },
     {
       "title": "Riverside Night",
-      "caption": "Friends, river lights and one quiet evening that felt easy to remember.",
+      "caption": "Close ones, river lights and one quiet evening that stayed softly.",
       "image": "assets/photos/kawaii/kawaii-riverside-night-selfie.webp"
     },
     {
@@ -75,12 +75,12 @@
     },
     {
       "title": "Certificates And Hills",
-      "caption": "Learning, travel, waterfalls and friends packed into one cute collage.",
+      "caption": "Learning, travel, waterfalls and people who made the day feel full.",
       "image": "assets/photos/kawaii/kawaii-certificates-and-hills.webp"
     },
     {
-      "title": "Food, Friends And City Lights",
-      "caption": "Street food, desserts, friends and bright evening memories.",
+      "title": "Food, Smiles And City Lights",
+      "caption": "Street food, desserts and close hearts glowing through the evening.",
       "image": "assets/photos/kawaii/kawaii-food-friends-city-lights.webp"
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "title": "Night Out Collage",
-      "caption": "Night lights, friends, selfies and the kind of evenings that feel alive.",
+      "caption": "Night lights, favorite people and the kind of evenings that feel alive.",
       "image": "assets/photos/kawaii/kawaii-night-out-collage.webp"
     },
     {
@@ -124,29 +124,33 @@
       "image": "assets/photos/kawaii/kawaii-blue-suit-memory.webp"
     },
     {
-      "title": "Forest Friends",
-      "caption": "A sunny forest frame with friends, leaves and one bright smile.",
+      "title": "Forest Glow",
+      "caption": "A sunny forest frame with favorite people, soft leaves and one bright smile.",
       "image": "assets/photos/kawaii/kawaii-forest-friends.webp"
     },
     {
-      "title": "Forest Friends Animation",
-      "caption": "A cute animated memory with friends, flowers and a soft forest glow.",
-      "image": "assets/photos/kawaii/kawaii-forest-friends-animation.gif",
+      "title": "Forest Glow GIF",
+      "caption": "A tiny moving memory with favorite people, soft leaves and a warm little smile.",
+      "image": "assets/photos/kawaii/kawaii-forest-friends-animation.gif"
+    },
+    {
+      "title": "Forest Glow Video",
+      "caption": "A short animated memory with favorite people, flowers and a soft forest glow.",
       "video": "assets/photos/kawaii/kawaii-forest-friends-animation.mp4"
     },
     {
       "title": "Little Rabbit Moment",
-      "caption": "Cherry loved the little rabbit in her hand, and she looked so happy.",
+      "caption": "A tiny rabbit, a quiet smile and one moment that felt gentle in the heart.",
       "image": "assets/photos/kawaii/kawaii-little-rabbit-moment.webp"
     },
     {
       "title": "ISKCON Selfie",
-      "caption": "A happy selfie outside ISKCON with friends and devotional vibes.",
+      "caption": "A happy ISKCON frame with close ones and peaceful devotional vibes.",
       "image": "assets/photos/kawaii/kawaii-iskcon-selfie.webp"
     },
     {
-      "title": "Night Temple Friends",
-      "caption": "A night temple frame with friends, stars and glowing lights.",
+      "title": "Night Temple Glow",
+      "caption": "A night temple frame with favorite people, stars and glowing lights.",
       "image": "assets/photos/kawaii/kawaii-night-temple-friends.webp"
     }
   ],
