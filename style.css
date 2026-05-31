@@ -540,6 +540,7 @@ select:focus {
   display: block;
   color: inherit;
   text-decoration: none;
+  position: relative;
 }
 
 .gallery-photo img,
@@ -556,6 +557,96 @@ select:focus {
   place-items: center;
   font-size: 3rem;
   background: linear-gradient(135deg, #ffe3ec, #f7f1ff 60%, #fff7d9);
+}
+
+.gallery-play {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background: rgba(44, 34, 40, 0.72);
+  box-shadow: 0 14px 28px rgba(44, 34, 40, 0.22);
+  font-size: 1.25rem;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.media-lightbox[hidden] {
+  display: none;
+}
+
+.media-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 22px;
+}
+
+.media-lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(44, 34, 40, 0.62);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+.media-lightbox__panel {
+  position: relative;
+  width: min(92vw, 760px);
+  border-radius: 28px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 32px 80px rgba(44, 34, 40, 0.28);
+}
+
+.media-lightbox__panel video,
+.media-lightbox__panel img {
+  width: 100%;
+  max-height: 76vh;
+  display: block;
+  border-radius: 20px;
+  background: #1f171c;
+  object-fit: contain;
+}
+
+.media-lightbox__panel img[hidden],
+.media-lightbox__panel video[hidden] {
+  display: none;
+}
+
+.media-lightbox__close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--plum);
+  background: #fff;
+  box-shadow: 0 14px 28px rgba(44, 34, 40, 0.18);
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+#mediaTitle {
+  margin: 12px 4px 0;
+  color: var(--muted);
+  font-weight: 850;
+  text-align: center;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 .gallery-caption {
