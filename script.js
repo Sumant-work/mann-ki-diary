@@ -143,13 +143,22 @@ function renderMemories() {
 }
 
 function galleryTemplate(item, index) {
-  const visual = item.image
-    ? `
+  let visual = `<div class="gallery-placeholder" aria-hidden="true">🌸</div>`;
+
+  if (item.video) {
+    const poster = item.image ? ` poster="${escapeAttribute(item.image)}"` : "";
+    visual = `
+        <a class="gallery-photo" href="${escapeAttribute(item.video)}" aria-label="Open ${escapeAttribute(item.title || `Video ${index + 1}`)}">
+          <video src="${escapeAttribute(item.video)}"${poster} autoplay muted loop playsinline preload="metadata"></video>
+        </a>
+      `;
+  } else if (item.image) {
+    visual = `
         <a class="gallery-photo" href="${escapeAttribute(item.image)}" aria-label="Open ${escapeAttribute(item.title || `Photo ${index + 1}`)}">
           <img src="${escapeAttribute(item.image)}" alt="${escapeAttribute(item.title || `Photo ${index + 1}`)}" loading="lazy" />
         </a>
-      `
-    : `<div class="gallery-placeholder" aria-hidden="true">🌸</div>`;
+      `;
+  }
 
   return `
     <article class="gallery-card reveal">
