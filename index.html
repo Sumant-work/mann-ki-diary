@@ -1,166 +1,221 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mann Ki Diary</title>
-  <meta name="description" content="A soft personal blog-style memories page for stories, feelings, photos and life moments." />
-  <meta name="robots" content="noindex, nofollow" />
-  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="style.css?v=6" />
-</head>
-<body>
-  <div class="soft-bg" aria-hidden="true"></div>
-  <div class="petal-layer" aria-hidden="true">
-    <span></span><span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span><span></span>
-  </div>
-
-  <header class="site-header" id="top">
-    <nav class="nav-shell" aria-label="Main navigation">
-      <a class="brand" href="#top" aria-label="Go to top">
-        <span class="brand-mark">✦</span>
-        <span id="brandName">Mann Ki Diary</span>
-      </a>
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
-      <div class="nav-links" id="navLinks">
-        <a href="#memories">Memories</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#thoughts">Thoughts</a>
-        <a href="#letters">Letters</a>
-        <a href="#about">About</a>
-        <a href="admin/">Admin</a>
-      </div>
-    </nav>
-
-    <section class="hero section-wrap">
-      <div class="hero-copy reveal">
-        <p class="eyebrow" id="eyebrowText">A quiet corner for real feelings</p>
-        <h1 id="heroTitle">Where moments become memories.</h1>
-        <p class="hero-text" id="heroSubtitle">
-          Stories, photos, thoughts, and little pieces of life—kept softly in one beautiful place.
-        </p>
-        <div class="hero-actions">
-          <a class="primary-btn" href="#memories">Read memories</a>
-          <a class="ghost-btn" href="admin/">Write a post</a>
-        </div>
-      </div>
-
-      <aside class="hero-card reveal" aria-label="Featured thought">
-        <img class="hero-sticker" src="assets/stickers/profile-sticker.png" alt="" aria-hidden="true" />
-        <div class="moon"></div>
-        <p class="quote-mark">“</p>
-        <p id="featuredQuote">Some feelings are not posted for attention. They are kept because they once made us alive.</p>
-        <span id="featuredBy">— My heart</span>
-      </aside>
-    </section>
-  </header>
-
-  <main>
-    <section class="section-wrap intro-grid" aria-label="Website highlights">
-      <article class="mini-card reveal">
-        <span>🌸</span>
-        <h3>Mann Ki Baatein</h3>
-        <p>Dil se likhi hui stories, moods, dates aur yaadein.</p>
-      </article>
-      <article class="mini-card reveal">
-        <span>📷</span>
-        <h3>Yaadon Ke Frames</h3>
-        <p>Photos ke saath captions, friends aur un palon ki chhoti kahani.</p>
-      </article>
-      <article class="mini-card reveal">
-        <span>🕯️</span>
-        <h3>Unsent Letters</h3>
-        <p>Wo baatein jo keh nahi paaya, poems aur quiet feelings.</p>
-      </article>
-    </section>
-
-    <section class="section-wrap" id="memories">
-      <div class="section-head reveal">
-        <p class="eyebrow">Timeline</p>
-        <h2>Memory Journal</h2>
-        <p>Search by word, feeling, place or date.</p>
-      </div>
-
-      <div class="tools reveal">
-        <label class="search-box">
-          <span>Search</span>
-          <input id="searchInput" type="search" placeholder="Try: hope, rain, birthday, night..." />
-        </label>
-        <label class="filter-box">
-          <span>Mood</span>
-          <select id="moodFilter">
-            <option value="all">All moods</option>
-          </select>
-        </label>
-      </div>
-
-      <div class="memory-list" id="memoryList" aria-live="polite"></div>
-    </section>
-
-    <section class="section-wrap" id="gallery">
-      <div class="section-head reveal">
-        <p class="eyebrow">Frames</p>
-        <h2>Photo Gallery</h2>
-        <p>Small photos, big feelings.</p>
-      </div>
-      <div class="gallery-grid" id="galleryGrid"></div>
-    </section>
-
-    <section class="section-wrap split-section" id="thoughts">
-      <div class="section-head reveal">
-        <p class="eyebrow">Small thoughts</p>
-        <h2>Little Lines</h2>
-        <p>Short feelings, quick notes and lines worth saving.</p>
-      </div>
-      <div class="thought-carousel reveal" aria-label="Little Lines">
-        <button class="thought-nav" id="thoughtPrev" type="button" aria-label="Previous thoughts" title="Previous thoughts">‹</button>
-        <div class="thought-grid" id="thoughtGrid"></div>
-        <button class="thought-nav" id="thoughtNext" type="button" aria-label="Next thoughts" title="Next thoughts">›</button>
-      </div>
-      <p class="thought-status" id="thoughtStatus"></p>
-    </section>
-
-    <section class="section-wrap split-section" id="letters">
-      <div class="section-head reveal">
-        <p class="eyebrow">Unsent words</p>
-        <h2>Letters & Lines</h2>
-        <p>For the words that needed a home.</p>
-      </div>
-      <div class="letter-board reveal" id="letterBoard"></div>
-    </section>
-
-    <section class="section-wrap about-section" id="about">
-      <div class="about-card reveal">
-        <p class="eyebrow">About this page</p>
-        <h2 id="aboutTitle">A peaceful personal archive.</h2>
-        <p id="aboutText">
-          A place where thoughts slow down, memories breathe, and feelings find their own little sky. Here, I write the moments I could not say out loud — stories, emotions, dreams, growth, silence, and everything that made me who I am becoming.
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p id="footerText">Made with memories, softness and hope.</p>
-    <div class="footer-links">
-      <a href="admin/">Admin</a>
-      <a href="#top">Back to top ↑</a>
-    </div>
-  </footer>
-
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", (user) => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
+{
+  "siteName": "Mann Ki Diary",
+  "eyebrow": "A quiet corner for real feelings",
+  "heroTitle": "Where moments become memories.",
+  "heroSubtitle": "Stories, photos, thoughts, and little pieces of life - kept softly in one beautiful place.",
+  "featuredQuote": "Some feelings are not posted for attention. They are kept because they once made us alive.",
+  "featuredBy": "- My heart",
+  "aboutTitle": "A peaceful personal archive.",
+  "aboutText": "A place where thoughts slow down, memories breathe, and feelings find their own little sky. Here, I write the moments I could not say out loud - stories, emotions, dreams, growth, silence, and everything that made me who I am becoming.",
+  "footerText": "Made with memories, softness and hope.",
+  "memories": [
+    {
+      "date": "09 May 2026",
+      "mood": "Dream",
+      "title": "The Dream She Left Behind",
+      "text": "Some dreams do not end when we open our eyes. There was a temple near home, a quiet river, soft sunrise, and the feeling that she was there. Everything faded when I woke up, but the dream stayed with me.",
+      "image": "assets/photos/dream-she-left-behind.webp",
+      "tags": ["dream", "temple", "sunrise", "memory"]
+    },
+    {
+      "date": "28 October 2024",
+      "mood": "Beautiful",
+      "title": "The Day She Made Everything Beautiful",
+      "text": "This is not just a story. This is one of the most beautiful days of my life - the day that still lives in my heart. Some people come into your life and quietly become your favorite memory.",
+      "image": "assets/photos/day-she-made-everything-beautiful.webp",
+      "tags": ["birthday", "beautiful day", "favorite memory", "heart"]
+    },
+    {
+      "date": "28 October 2024",
+      "mood": "Warm",
+      "title": "A memory I wanted to keep",
+      "text": "Some days do not return, but their light stays somewhere inside us. This was one of those days - simple, soft, and unforgettable.",
+      "tags": ["birthday", "soft memory", "grateful"]
+    },
+    {
+      "date": "A quiet night",
+      "mood": "Hope",
+      "title": "When the heart became honest",
+      "text": "I did not need the world to understand everything. I only wanted a place where I could write what I felt without hiding from myself.",
+      "tags": ["night", "healing", "truth"]
+    },
+    {
+      "date": "Today",
+      "mood": "Growth",
+      "title": "A promise to myself",
+      "text": "Even if some stories hurt, I will keep growing. I will turn pain into discipline, memories into art, and silence into peace.",
+      "tags": ["growth", "self", "peace"]
     }
-  </script>
-  <script src="script.js?v=6"></script>
-</body>
-</html>
+  ],
+  "gallery": [
+    {
+      "title": "Night Garden Selfie",
+      "caption": "A soft night garden, flowers, lights and two little phone memories.",
+      "image": "assets/photos/kawaii/kawaii-night-garden-selfie.webp"
+    },
+    {
+      "title": "Puja Day Smiles",
+      "caption": "A warm family moment after puja, full of yellow, purple and happy faces.",
+      "image": "assets/photos/kawaii/kawaii-puja-day-smiles.webp"
+    },
+    {
+      "title": "Riverside Night",
+      "caption": "Close ones, river lights and one quiet evening that stayed softly.",
+      "image": "assets/photos/kawaii/kawaii-riverside-night-selfie.webp"
+    },
+    {
+      "title": "Blossom Tree Moment",
+      "caption": "A tiny happy pause under flowers, sparkles and a soft evening sky.",
+      "image": "assets/photos/kawaii/kawaii-blossom-tree-moment.webp"
+    },
+    {
+      "title": "Temple Lights",
+      "caption": "A peaceful temple scene with glowing lights and darshan vibes.",
+      "image": "assets/photos/kawaii/kawaii-temple-lights.webp"
+    },
+    {
+      "title": "Certificates And Hills",
+      "caption": "Learning, travel, waterfalls and people who made the day feel full.",
+      "image": "assets/photos/kawaii/kawaii-certificates-and-hills.webp"
+    },
+    {
+      "title": "Food, Smiles And City Lights",
+      "caption": "Street food, desserts and close hearts glowing through the evening.",
+      "image": "assets/photos/kawaii/kawaii-food-friends-city-lights.webp"
+    },
+    {
+      "title": "Tiny Memory Stickers",
+      "caption": "Small things that somehow became sweet reminders.",
+      "image": "assets/photos/kawaii/kawaii-tiny-memory-stickers.webp"
+    },
+    {
+      "title": "Temple Day Collage",
+      "caption": "Temple visits, group smiles, river views and colorful festive frames.",
+      "image": "assets/photos/kawaii/kawaii-temple-day-collage.webp"
+    },
+    {
+      "title": "Park And Fairground",
+      "caption": "Playful moments, lights, rides and soft smiles from a bright day out.",
+      "image": "assets/photos/kawaii/kawaii-park-and-fairground.webp"
+    },
+    {
+      "title": "Festival And Train",
+      "caption": "A collage of festive lights, train rides and memories that kept moving.",
+      "image": "assets/photos/kawaii/kawaii-festival-and-train.webp"
+    },
+    {
+      "title": "Night Out Collage",
+      "caption": "Night lights, favorite people and the kind of evenings that feel alive.",
+      "image": "assets/photos/kawaii/kawaii-night-out-collage.webp"
+    },
+    {
+      "title": "Temple Couple Memory",
+      "caption": "A gentle temple memory with flowers, hearts and a peaceful smile.",
+      "image": "assets/photos/kawaii/kawaii-temple-couple-memory.webp"
+    },
+    {
+      "title": "Train Memories",
+      "caption": "A 2 AM train memory with coordinates, date and a little travel story.",
+      "image": "assets/photos/kawaii/kawaii-train-memories.webp"
+    },
+    {
+      "title": "Blue Suit Memory",
+      "caption": "A calm blue-suit frame in front of an old home and soft flowers.",
+      "image": "assets/photos/kawaii/kawaii-blue-suit-memory.webp"
+    },
+    {
+      "title": "Forest Glow",
+      "caption": "A sunny forest frame with favorite people, soft leaves and one bright smile.",
+      "image": "assets/photos/kawaii/kawaii-forest-friends.webp"
+    },
+    {
+      "title": "Forest Glow GIF",
+      "caption": "A tiny moving memory with favorite people, soft leaves and a warm little smile.",
+      "image": "assets/photos/kawaii/kawaii-forest-friends-animation.gif"
+    },
+    {
+      "title": "Forest Glow Video",
+      "caption": "A short animated memory with favorite people, flowers and a soft forest glow.",
+      "video": "assets/photos/kawaii/kawaii-forest-friends-animation.mp4"
+    },
+    {
+      "title": "Little Rabbit Moment",
+      "caption": "A tiny rabbit, a quiet smile and one moment that felt gentle in the heart.",
+      "image": "assets/photos/kawaii/kawaii-little-rabbit-moment.webp"
+    },
+    {
+      "title": "ISKCON Selfie",
+      "caption": "A happy ISKCON frame with close ones and peaceful devotional vibes.",
+      "image": "assets/photos/kawaii/kawaii-iskcon-selfie.webp"
+    },
+    {
+      "title": "Night Temple Glow",
+      "caption": "A night temple frame with favorite people, stars and glowing lights.",
+      "image": "assets/photos/kawaii/kawaii-night-temple-friends.webp"
+    }
+  ],
+  "thoughts": [
+    {
+      "text": "Happiness is like a passing guest; sorrow is the one that stays loyal.",
+      "by": "Passing feeling"
+    },
+    {
+      "text": "When people lose someone and quietly endure the pain, the world calls it maturity.",
+      "by": "Quiet pain"
+    },
+    {
+      "text": "Sometimes, having a tender heart and a truthful soul feels less like a blessing, and more like a curse.",
+      "by": "Tender heart"
+    },
+    {
+      "text": "Rebirth is only a beautiful illusion, my dear.",
+      "by": "Soft truth"
+    },
+    {
+      "text": "Life doesn't work on emotional Intensity.",
+      "by": "Reality note"
+    },
+    {
+      "text": "Healing is Crying without Tear",
+      "by": "Healing"
+    },
+    {
+      "text": "There is a place I must reach, but first, there is a place I must leave.",
+      "by": "Leaving"
+    },
+    {
+      "text": "A person slowly dies when they say nothing and keep thinking everything.",
+      "by": "Silent mind"
+    },
+    {
+      "text": "Bit by bit, I am turning into stone; bit by bit, I am disappearing from myself.",
+      "by": "Stone heart"
+    },
+    {
+      "text": "Some days are not perfect, but they still teach us how to stay soft.",
+      "by": "Today"
+    },
+    {
+      "text": "I am becoming someone my younger self needed.",
+      "by": "Note to self"
+    },
+    {
+      "text": "A small memory can hold a whole season.",
+      "by": "Saved thought"
+    }
+  ],
+  "letters": [
+    {
+      "text": "Some people become a season in our life. Even when they leave, the weather remembers them.",
+      "by": "A saved line"
+    },
+    {
+      "text": "I am learning to keep love without losing myself, and to keep memories without living inside them forever.",
+      "by": "Note to self"
+    },
+    {
+      "text": "Not every feeling needs a reply. Some feelings only need a beautiful place to rest.",
+      "by": "Unsent thought"
+    }
+  ]
+}
