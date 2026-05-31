@@ -8,6 +8,12 @@ const thoughtPrev = $("#thoughtPrev");
 const thoughtNext = $("#thoughtNext");
 const thoughtStatus = $("#thoughtStatus");
 const letterBoard = $("#letterBoard");
+const mediaLightbox = $("#mediaLightbox");
+const mediaBackdrop = $("#mediaBackdrop");
+const mediaClose = $("#mediaClose");
+const mediaTitle = $("#mediaTitle");
+const lightboxVideo = $("#lightboxVideo");
+const lightboxImage = $("#lightboxImage");
 const searchInput = $("#searchInput");
 const moodFilter = $("#moodFilter");
 const menuBtn = $("#menuBtn");
@@ -146,15 +152,20 @@ function galleryTemplate(item, index) {
   let visual = `<div class="gallery-placeholder" aria-hidden="true">🌸</div>`;
 
   if (item.video) {
-    const poster = item.image ? ` poster="${escapeAttribute(item.image)}"` : "";
+    const title = item.title || `Video ${index + 1}`;
+    const preview = item.image
+      ? `<img src="${escapeAttribute(item.image)}" alt="${escapeAttribute(title)}" loading="lazy" />`
+      : `<video src="${escapeAttribute(item.video)}" autoplay muted loop playsinline preload="metadata"></video>`;
+    const image = item.image ? ` data-gallery-image="${escapeAttribute(item.image)}"` : "";
     visual = `
-        <a class="gallery-photo" href="${escapeAttribute(item.video)}" aria-label="Open ${escapeAttribute(item.title || `Video ${index + 1}`)}">
-          <video src="${escapeAttribute(item.video)}"${poster} autoplay muted loop playsinline preload="metadata"></video>
+        <a class="gallery-photo has-video" href="${escapeAttribute(item.video)}" data-gallery-video="${escapeAttribute(item.video)}"${image} data-gallery-title="${escapeAttribute(title)}" aria-label="Open ${escapeAttribute(title)}">
+          ${preview}
+          <span class="gallery-play" aria-hidden="true">▶</span>
         </a>
       `;
   } else if (item.image) {
     visual = `
-        <a class="gallery-photo" href="${escapeAttribute(item.image)}" aria-label="Open ${escapeAttribute(item.title || `Photo ${index + 1}`)}">
+        <a class="gallery-photo" href="${escapeAttribute(item.image)}" data-gallery-image="${escapeAttribute(item.image)}" data-gallery-title="${escapeAttribute(item.title || `Photo ${index + 1}`)}" aria-label="Open ${escapeAttribute(item.title || `Photo ${index + 1}`)}">
           <img src="${escapeAttribute(item.image)}" alt="${escapeAttribute(item.title || `Photo ${index + 1}`)}" loading="lazy" />
         </a>
       `;
@@ -251,6 +262,73 @@ function renderContentError() {
   letterBoard.innerHTML = message;
 }
 
+function showLightboxImage(src, title) {
+  if (!lightboxImage) return;
+
+  lightboxImage.src = src;
+  lightboxImage.alt = title || "Memory preview";
+  lightboxImage.hidden = false;
+  if (lightboxVideo) lightboxVideo.hidden = true;
+}
+
+function openMediaPreview(link) {
+  if (!mediaLightbox || !lightboxVideo || !lightboxImage) return;
+
+  const title = link.dataset.galleryTitle || "Memory preview";
+  const videoSrc = link.dataset.galleryVideo;
+  const imageSrc = link.dataset.galleryImage;
+
+  if (mediaTitle) mediaTitle.textContent = title;
+  mediaLightbox.hidden = false;
+  document.body.classList.add("modal-open");
+
+  lightboxVideo.pause();
+  lightboxVideo.hidden = true;
+  lightboxImage.hidden = true;
+
+  if (videoSrc) {
+    lightboxVideo.oncanplay = null;
+    lightboxVideo.onerror = null;
+
+    if (imageSrc) {
+      showLightboxImage(imageSrc, title);
+    } else {
+      lightboxVideo.hidden = false;
+    }
+
+    lightboxVideo.src = videoSrc;
+    if (imageSrc) {
+      lightboxVideo.onerror = () => showLightboxImage(imageSrc, title);
+    }
+    lightboxVideo.oncanplay = () => {
+      if (lightboxImage) lightboxImage.hidden = true;
+      lightboxVideo.hidden = false;
+      lightboxVideo.play().catch(() => {
+        lightboxVideo.controls = true;
+      });
+    };
+    lightboxVideo.load();
+    return;
+  }
+
+  if (imageSrc) showLightboxImage(imageSrc, title);
+}
+
+function closeVideoPreview() {
+  if (!mediaLightbox || !lightboxVideo || !lightboxImage) return;
+
+  lightboxVideo.pause();
+  lightboxVideo.oncanplay = null;
+  lightboxVideo.onerror = null;
+  lightboxVideo.removeAttribute("src");
+  lightboxVideo.load();
+  lightboxVideo.hidden = false;
+  lightboxImage.removeAttribute("src");
+  lightboxImage.hidden = true;
+  mediaLightbox.hidden = true;
+  document.body.classList.remove("modal-open");
+}
+
 function escapeHtml(value) {
   return String(value)
     .replace(/&/g, "&amp;")
@@ -292,6 +370,14 @@ function bindEvents() {
   searchInput.addEventListener("input", renderMemories);
   moodFilter.addEventListener("change", renderMemories);
 
+  galleryGrid.addEventListener("click", (event) => {
+    const mediaLink = event.target.closest("[data-gallery-video], [data-gallery-image]");
+    if (!mediaLink) return;
+
+    event.preventDefault();
+    openMediaPreview(mediaLink);
+  });
+
   if (thoughtPrev && thoughtNext) {
     thoughtPrev.addEventListener("click", () => scrollThoughts(-1));
     thoughtNext.addEventListener("click", () => scrollThoughts(1));
@@ -307,6 +393,14 @@ function bindEvents() {
       navLinks.classList.remove("open");
       menuBtn.setAttribute("aria-expanded", "false");
     }
+  });
+
+  [mediaBackdrop, mediaClose].forEach((button) => {
+    if (button) button.addEventListener("click", closeVideoPreview);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeVideoPreview();
   });
 }
 
