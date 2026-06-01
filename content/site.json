@@ -15,7 +15,12 @@
       "title": "The Dream She Left Behind",
       "text": "Some dreams do not end when we open our eyes. There was a temple near home, a quiet river, soft sunrise, and the feeling that she was there. Everything faded when I woke up, but the dream stayed with me.",
       "image": "assets/photos/dream-she-left-behind.webp",
-      "tags": ["dream", "temple", "sunrise", "memory"]
+      "tags": [
+        "dream",
+        "temple",
+        "sunrise",
+        "memory"
+      ]
     },
     {
       "date": "28 October 2024",
@@ -23,28 +28,45 @@
       "title": "The Day She Made Everything Beautiful",
       "text": "This is not just a story. This is one of the most beautiful days of my life - the day that still lives in my heart. Some people come into your life and quietly become your favorite memory.",
       "image": "assets/photos/day-she-made-everything-beautiful.webp",
-      "tags": ["birthday", "beautiful day", "favorite memory", "heart"]
+      "tags": [
+        "birthday",
+        "beautiful day",
+        "favorite memory",
+        "heart"
+      ]
     },
     {
       "date": "28 October 2024",
       "mood": "Warm",
       "title": "A memory I wanted to keep",
       "text": "Some days do not return, but their light stays somewhere inside us. This was one of those days - simple, soft, and unforgettable.",
-      "tags": ["birthday", "soft memory", "grateful"]
+      "tags": [
+        "birthday",
+        "soft memory",
+        "grateful"
+      ]
     },
     {
       "date": "A quiet night",
       "mood": "Hope",
       "title": "When the heart became honest",
       "text": "I did not need the world to understand everything. I only wanted a place where I could write what I felt without hiding from myself.",
-      "tags": ["night", "healing", "truth"]
+      "tags": [
+        "night",
+        "healing",
+        "truth"
+      ]
     },
     {
       "date": "Today",
       "mood": "Growth",
       "title": "A promise to myself",
       "text": "Even if some stories hurt, I will keep growing. I will turn pain into discipline, memories into art, and silence into peace.",
-      "tags": ["growth", "self", "peace"]
+      "tags": [
+        "growth",
+        "self",
+        "peace"
+      ]
     }
   ],
   "gallery": [
@@ -152,6 +174,376 @@
       "title": "Night Temple Glow",
       "caption": "A night temple frame with favorite people, stars and glowing lights.",
       "image": "assets/photos/kawaii/kawaii-night-temple-friends.webp"
+    },
+    {
+      "title": "Slide Day Smiles",
+      "caption": "A bright little playground pause with laughter, colors and soft sunshine.",
+      "image": "assets/photos/kawaii-2/kawaii2-001.jpg"
+    },
+    {
+      "title": "Cozy Anime Study",
+      "caption": "A warm table, tiny snacks and one peaceful comfort moment.",
+      "image": "assets/photos/kawaii-2/kawaii2-002.jpg"
+    },
+    {
+      "title": "Quiet Water Reflection",
+      "caption": "A calm water view that feels like breathing slowly for a while.",
+      "image": "assets/photos/kawaii-2/kawaii2-003.jpg"
+    },
+    {
+      "title": "Playground Selfie",
+      "caption": "Close ones, bright hoodies and a day that stayed playful.",
+      "image": "assets/photos/kawaii-2/kawaii2-004.jpg"
+    },
+    {
+      "title": "Sunny Playground Faces",
+      "caption": "Those easy smiles that make an ordinary afternoon feel kept.",
+      "image": "assets/photos/kawaii-2/kawaii2-005.jpg"
+    },
+    {
+      "title": "Swing Sunshine",
+      "caption": "Two soft smiles on the swings, wrapped in golden park light.",
+      "image": "assets/photos/kawaii-2/kawaii2-006.jpg"
+    },
+    {
+      "title": "Blue Hoodie Flower",
+      "caption": "A tiny flower in hand and a quiet kind of happiness.",
+      "image": "assets/photos/kawaii-2/kawaii2-007.jpg"
+    },
+    {
+      "title": "Upside Down Laugh",
+      "caption": "A funny little frame where the mood forgot to be serious.",
+      "image": "assets/photos/kawaii-2/kawaii2-008.jpg"
+    },
+    {
+      "title": "Garden Selfie Mood",
+      "caption": "A soft garden moment with tiny hearts floating around the day.",
+      "image": "assets/photos/kawaii-2/kawaii2-009.jpg"
+    },
+    {
+      "title": "Market Little Joy",
+      "caption": "A simple market walk, full of color, laughter and tiny surprises.",
+      "image": "assets/photos/kawaii-2/kawaii2-010.jpg"
+    },
+    {
+      "title": "Pink Hoodie Branch",
+      "caption": "One small branch, one playful pause, one memory with sunlight.",
+      "image": "assets/photos/kawaii-2/kawaii2-011.jpg"
+    },
+    {
+      "title": "Tiny Care Kit",
+      "caption": "Small things that quietly say someone remembered you.",
+      "image": "assets/photos/kawaii-2/kawaii2-012.jpg"
+    },
+    {
+      "title": "Seesaw Laugh",
+      "caption": "Childlike laughter, open sky and a memory that feels light.",
+      "image": "assets/photos/kawaii-2/kawaii2-013.jpg"
+    },
+    {
+      "title": "Festive Selfie Glow",
+      "caption": "Bright colors, close faces and a festive moment kept close.",
+      "image": "assets/photos/kawaii-2/kawaii2-014.jpg"
+    },
+    {
+      "title": "Yellow Heart Frame",
+      "caption": "A warm yellow frame with smiles that feel easy and close.",
+      "image": "assets/photos/kawaii-2/kawaii2-016.jpg"
+    },
+    {
+      "title": "Shop Mirror Pause",
+      "caption": "A sweet mirror pause between colors, lights and tiny choices.",
+      "image": "assets/photos/kawaii-2/kawaii2-017.jpg"
+    },
+    {
+      "title": "Fair Lights Selfie",
+      "caption": "Soft evening lights, close faces and a little fairground glow.",
+      "image": "assets/photos/kawaii-2/kawaii2-018.jpg"
+    },
+    {
+      "title": "Braided Leaf Memory",
+      "caption": "A tiny handmade leaf moment from a playful afternoon.",
+      "image": "assets/photos/kawaii-2/kawaii2-019.jpg"
+    },
+    {
+      "title": "Forest Vibe",
+      "caption": "A quiet forest path with little hearts hiding between the leaves.",
+      "image": "assets/photos/kawaii-2/kawaii2-020.jpg"
+    },
+    {
+      "title": "Cute Dosa Table",
+      "caption": "Crispy dosa, tiny smiles and the kind of hunger that becomes a memory.",
+      "image": "assets/photos/kawaii-2/kawaii2-021.jpg"
+    },
+    {
+      "title": "Cafe Table Glow",
+      "caption": "Warm cafe lights, soft faces and a table that held the moment.",
+      "image": "assets/photos/kawaii-2/kawaii2-022.jpg"
+    },
+    {
+      "title": "Aquarium Soft Light",
+      "caption": "Blue aquarium light around a calm little pause together.",
+      "image": "assets/photos/kawaii-2/kawaii2-023.jpg"
+    },
+    {
+      "title": "Forest Hug Moment",
+      "caption": "A happy lift, green trees and one of those frames that feels alive.",
+      "image": "assets/photos/kawaii-2/kawaii2-024.jpg"
+    },
+    {
+      "title": "Forest Close Selfie",
+      "caption": "Sun through leaves, close faces and a day that felt gentle.",
+      "image": "assets/photos/kawaii-2/kawaii2-025.jpg"
+    },
+    {
+      "title": "Red Roof Selfie",
+      "caption": "A small pause under bright colors and quiet happy eyes.",
+      "image": "assets/photos/kawaii-2/kawaii2-026.jpg"
+    },
+    {
+      "title": "Cafe Window Memory",
+      "caption": "Warm lights, little hearts and a cafe frame kept softly.",
+      "image": "assets/photos/kawaii-2/kawaii2-027.jpg"
+    },
+    {
+      "title": "Stone Path Selfie",
+      "caption": "A sunny stone path and the feeling of being there together.",
+      "image": "assets/photos/kawaii-2/kawaii2-028.jpg"
+    },
+    {
+      "title": "Train Seat Memory",
+      "caption": "A train ride frame with quiet smiles and window light.",
+      "image": "assets/photos/kawaii-2/kawaii2-029.jpg"
+    },
+    {
+      "title": "Mehndi Smile",
+      "caption": "A festive little victory sign, bright faces and soft joy.",
+      "image": "assets/photos/kawaii-2/kawaii2-030.jpg"
+    },
+    {
+      "title": "Pastel Hill Selfie",
+      "caption": "Pastel sky, flowers and a peaceful view behind two soft smiles.",
+      "image": "assets/photos/kawaii-2/kawaii2-031.jpg"
+    },
+    {
+      "title": "Green Celebration",
+      "caption": "A dressy little celebration frame with hearts all around.",
+      "image": "assets/photos/kawaii-2/kawaii2-032.jpg"
+    },
+    {
+      "title": "Pink Festive Glow",
+      "caption": "A close festive selfie full of pink light and gentle warmth.",
+      "image": "assets/photos/kawaii-2/kawaii2-033.jpg"
+    },
+    {
+      "title": "Sunny Lawn Memory",
+      "caption": "A big tree, tiny figures and a soft open-space kind of day.",
+      "image": "assets/photos/kawaii-2/kawaii2-034.jpg"
+    },
+    {
+      "title": "Black And White Lamp",
+      "caption": "A quiet night frame where even the light felt emotional.",
+      "image": "assets/photos/kawaii-2/kawaii2-035.jpg"
+    },
+    {
+      "title": "Winter Store Smile",
+      "caption": "Warm jackets, close faces and a tiny shop-day memory.",
+      "image": "assets/photos/kawaii-2/kawaii2-036.jpg"
+    },
+    {
+      "title": "Cozy Blanket Heart",
+      "caption": "A soft blanket moment that feels like home and care.",
+      "image": "assets/photos/kawaii-2/kawaii2-037.jpg"
+    },
+    {
+      "title": "Rocky Ground Selfie",
+      "caption": "A simple sitting-together memory with sunlight on the stones.",
+      "image": "assets/photos/kawaii-2/kawaii2-038.jpg"
+    },
+    {
+      "title": "Night Ride Feeling",
+      "caption": "A road, a scooter and the kind of night that feels cinematic.",
+      "image": "assets/photos/kawaii-2/kawaii2-039.jpg"
+    },
+    {
+      "title": "Rainy Drive Window",
+      "caption": "Rain on the glass, a slow road and a quiet lo-fi mood.",
+      "image": "assets/photos/kawaii-2/kawaii2-040.jpg"
+    },
+    {
+      "title": "Hotel Moon View",
+      "caption": "A cute night view with glowing windows and a soft city pause.",
+      "image": "assets/photos/kawaii-2/kawaii2-041.jpg"
+    },
+    {
+      "title": "Evening Street Treat",
+      "caption": "A small snack moment under evening lights and gentle attention.",
+      "image": "assets/photos/kawaii-2/kawaii2-042.jpg"
+    },
+    {
+      "title": "Cafe Cups Together",
+      "caption": "Two warm cups, two hands and a small toast to the day.",
+      "image": "assets/photos/kawaii-2/kawaii2-043.jpg"
+    },
+    {
+      "title": "Doorway Visit",
+      "caption": "A doorway pause with little lights and homely warmth.",
+      "image": "assets/photos/kawaii-2/kawaii2-044.jpg"
+    },
+    {
+      "title": "Little Gift Letter",
+      "caption": "A gift bag, chocolate and a letter carrying quiet feelings.",
+      "image": "assets/photos/kawaii-2/kawaii2-045.jpg"
+    },
+    {
+      "title": "March Board",
+      "caption": "A bright March memory board with playful color and tiny dreams.",
+      "image": "assets/photos/kawaii-2/kawaii2-046.jpg"
+    },
+    {
+      "title": "Coffee Smile",
+      "caption": "A cafe smile, two cute cups and a soft little waiting moment.",
+      "image": "assets/photos/kawaii-2/kawaii2-047.jpg"
+    },
+    {
+      "title": "Pizza Happy Bite",
+      "caption": "Cheesy pizza joy and a tiny pink world around it.",
+      "image": "assets/photos/kawaii-2/kawaii2-048.jpg"
+    },
+    {
+      "title": "Market Night Lights",
+      "caption": "A colorful market night full of signs, people and sparkle.",
+      "image": "assets/photos/kawaii-2/kawaii2-049.jpg"
+    },
+    {
+      "title": "Sleeping Cat",
+      "caption": "A peaceful little cat nap that feels like a pause button.",
+      "image": "assets/photos/kawaii-2/kawaii2-050.jpg"
+    },
+    {
+      "title": "Suitcase Cat Nap",
+      "caption": "A tiny sleepy visitor resting like it owns the suitcase.",
+      "image": "assets/photos/kawaii-2/kawaii2-051.jpg"
+    },
+    {
+      "title": "Saturday Bracelet",
+      "caption": "A date, a bracelet and one small shiny memory.",
+      "image": "assets/photos/kawaii-2/kawaii2-052.jpg"
+    },
+    {
+      "title": "Fun Fair Selfie",
+      "caption": "Bright fair colors, wide smiles and a playful day captured.",
+      "image": "assets/photos/kawaii-2/kawaii2-053.jpg"
+    },
+    {
+      "title": "Black Outfit Lake",
+      "caption": "A calm lake-side selfie with close people and soft daylight.",
+      "image": "assets/photos/kawaii-2/kawaii2-054.jpg"
+    },
+    {
+      "title": "Monday Road",
+      "caption": "A quiet Monday road, simple buildings and a soft everyday mood.",
+      "image": "assets/photos/kawaii-2/kawaii2-055.jpg"
+    },
+    {
+      "title": "Green Pond Quiet",
+      "caption": "A still pond, trees and a little place to breathe.",
+      "image": "assets/photos/kawaii-2/kawaii2-056.jpg"
+    },
+    {
+      "title": "Chocolate Store Hide",
+      "caption": "A sweet store moment with a chocolate box and a shy smile.",
+      "image": "assets/photos/kawaii-2/kawaii2-057.jpg"
+    },
+    {
+      "title": "Brown Outfit Selfie",
+      "caption": "A close little frame with warm colors and soft eyes.",
+      "image": "assets/photos/kawaii-2/kawaii2-058.jpg"
+    },
+    {
+      "title": "Tiny Lip Balm Thank You",
+      "caption": "A small thank-you moment held gently in the palm.",
+      "image": "assets/photos/kawaii-2/kawaii2-059.jpg"
+    },
+    {
+      "title": "Social Bowling",
+      "caption": "A bowling lane, neon lights and one playful throw.",
+      "image": "assets/photos/kawaii-2/kawaii2-060.jpg"
+    },
+    {
+      "title": "Grass Photo Date",
+      "caption": "A flower-filled hair moment saved like a tiny polaroid.",
+      "image": "assets/photos/kawaii-2/kawaii2-061.jpg"
+    },
+    {
+      "title": "Memory Binder",
+      "caption": "A little binder full of snapshots, hearts and kept days.",
+      "image": "assets/photos/kawaii-2/kawaii2-062.jpg"
+    },
+    {
+      "title": "Train Door Glow",
+      "caption": "A yellow train door and a quiet look before the journey.",
+      "image": "assets/photos/kawaii-2/kawaii2-063.jpg"
+    },
+    {
+      "title": "Bright Indoor Selfie",
+      "caption": "A warm indoor selfie with soft faces and sunlight nearby.",
+      "image": "assets/photos/kawaii-2/kawaii2-064.jpg"
+    },
+    {
+      "title": "Green Outfit Selfie",
+      "caption": "A dressy green frame with sparkle, hearts and closeness.",
+      "image": "assets/photos/kawaii-2/kawaii2-065.jpg"
+    },
+    {
+      "title": "Cafe Celebration Group",
+      "caption": "A happy group frame that feels full without needing many words.",
+      "image": "assets/photos/kawaii-2/kawaii2-066.jpg"
+    },
+    {
+      "title": "Softest Bedroom Frame",
+      "caption": "A cozy lying-down memory with soft hearts and sleepy warmth.",
+      "image": "assets/photos/kawaii-2/kawaii2-067.jpg"
+    },
+    {
+      "title": "Girl By The Lake",
+      "caption": "A quiet back-view moment beside water and distant hills.",
+      "image": "assets/photos/kawaii-2/kawaii2-068.jpg"
+    },
+    {
+      "title": "Lake Portrait",
+      "caption": "A peaceful lake portrait with soft mountains and a purple sky.",
+      "image": "assets/photos/kawaii-2/kawaii2-069.jpg"
+    },
+    {
+      "title": "Chai Corner",
+      "caption": "A little chai corner with crossed arms and warm roadside charm.",
+      "image": "assets/photos/kawaii-2/kawaii2-070.jpg"
+    },
+    {
+      "title": "Be You Sunset",
+      "caption": "A sunset thought, a river view and the quiet push to keep going.",
+      "image": "assets/photos/kawaii-2/kawaii2-071.jpg"
+    },
+    {
+      "title": "Plushie Store Wonder",
+      "caption": "A wall full of soft toys and one heart quietly choosing joy.",
+      "image": "assets/photos/kawaii-2/kawaii2-073.jpg"
+    },
+    {
+      "title": "Cozy Evening Trio",
+      "caption": "A warm evening trio frame with close smiles and soft light.",
+      "image": "assets/photos/kawaii-2/kawaii2-074.jpg"
+    },
+    {
+      "title": "Waterfall Quiet",
+      "caption": "A waterfall pause where the heart gets a little space.",
+      "image": "assets/photos/kawaii-2/kawaii2-075.jpg"
+    },
+    {
+      "title": "Kawaii Memory 76",
+      "caption": "A soft little memory from the gallery, kept close with warmth.",
+      "image": "assets/photos/kawaii-2/kawaii2-076.jpg"
     }
   ],
   "thoughts": [
